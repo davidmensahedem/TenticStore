@@ -9,7 +9,7 @@ const ProductCard = ({n}) => {
             <Card.Img variant="top" src="images/risidio_logo.png"/>
             <Card.Body className='bg-light'>
                 <Card.Text>
-                    <h6>Product Title</h6>  
+                    <p>Product Title</p>  
                     <p className='text-muted mt-3 Product-description'>Product description is the description of the product.</p>
                     <div className='d-flex justify-content-between'>
                         <p><Badge><b>$5.00 USD</b></Badge></p>
