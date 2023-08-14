@@ -2,7 +2,7 @@ import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import ProductCard from '../Products/ProductCard';
 
-const TrendingSection = () => {
+const TrendingSection = ({products}) => {
     return (
         <>
             <Row>
@@ -13,10 +13,10 @@ const TrendingSection = () => {
                 </Col>
             </Row>
             <Row>
-                {[1, 2, 3, 4].map(n => (
-                    <Col key={n} md={3}>
+                {products.map(product => (
+                    <Col key={product.id} md={3}>
                         <div className='container px-3'>
-                            <ProductCard Product={n} />
+                            <ProductCard product={product} />
                         </div>
                     </Col>
                 ))}

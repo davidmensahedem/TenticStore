@@ -19,7 +19,7 @@ const ProductDetails = () => {
                     </div>
                     <hr />
                     <p className='text-muted mt-3 tentic-productdetails-summary'>Product description is the description of the product.Product description is the description of the product.Product description is the description of the product.</p>
-                    <Button variant="outline-primary" className="mt-2">Add to Cart</Button>
+                    <Button variant="primary" className="mt-2">Add to Cart</Button>
                 </Col>
             </Row>
         </Container>

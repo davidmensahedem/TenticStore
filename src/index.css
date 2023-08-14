@@ -82,9 +82,15 @@ code {
   height: 60px;
 }
 
-@media (max-width:576px) {
+
+
+@media (max-width:537px) {
   .tentic-productdetails-image {
     max-width: 100%;
-    height: 350px;
+    max-height: 150px;
   }
+  .hide-on-small{
+    display: none;
+  }
+  
 }

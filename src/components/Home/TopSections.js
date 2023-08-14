@@ -4,7 +4,7 @@ import ProductCard from '../Products/ProductCard';
 
 
 
-const TopSection = () => {
+const TopSellingSection = ({products}) => {
     return ( 
         <>
               <Row>
@@ -15,10 +15,10 @@ const TopSection = () => {
                 </Col>
             </Row>
             <Row>
-                {[1, 2, 3, 4].map(n => (
-                    <Col key={n} md={3}>
+                {products.filter(product=>product.isTopSelling).map(product => (
+                    <Col key={product.id} md={3}>
                         <div className='container px-3'>
-                            <ProductCard Product={n} />
+                            <ProductCard key={product.id} product={product} />
                         </div>
                     </Col>
                 ))}
@@ -27,4 +27,4 @@ const TopSection = () => {
      );
 }
  
-export default TopSection;
+export default TopSellingSection;

@@ -1,35 +1,27 @@
-import { Outlet, Route, RouterProvider,createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import Home from './pages/Home';
 import ProductDetails from './pages/ProductDetails';
 import AllCollections from './pages/AllCollections';
-import Cart from './components/Cart/Cart';
-import AppNavbar from './components/Utilities/AppNavbar';
+import PageNotFound from './components/Utilities/PageNotFound';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import Layout from './components/Utilities/Layout';
+
 
 function App() {
-
-  const router = createBrowserRouter(
-    createRoutesFromElements(
-      <Route path='/' element={<Root />}>
-        <Route path='/' element={<Home />} />
-        <Route path='/productdetails' element={<ProductDetails />} />
-        <Route path='/allcollections' element={<AllCollections />} />
-      </Route>
-    )
-  );
-
   return (
     <>
-      <AppNavbar />
-      <Cart placement="end" />
-      <RouterProvider router={router} />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route path='/' element={<Home />} />
+            <Route path='/productdetails' element={<ProductDetails />} />
+            <Route path='/allcollections' element={<AllCollections />} />
+            <Route path='*' element={<PageNotFound />} />
+          </Route>
+        </Routes>
+      </Router>
     </>
-  );
-}
 
-const Root = () => {
-  return <>
-    <Outlet />
-  </>
+  );
 }
 
 export default App;

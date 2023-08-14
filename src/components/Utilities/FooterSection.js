@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Col, Container, Image, Row, Stack } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 
 const FooterSection = () => {
@@ -9,7 +10,9 @@ const FooterSection = () => {
                 <Col>
                     <Container className='d-flex justify-content-center align-items-center bg-light'>
                         <div className='p-4 my-3'>
-                            <Button variant='outline-success'>View all collections</Button>
+                            <Button variant='outline-success'>
+                                <Link to="/allcollections" className='text-decoration-none text-success'>View all collections</Link>
+                            </Button>
                         </div>
                     </Container>
                 </Col>
@@ -23,7 +26,7 @@ const FooterSection = () => {
                             <p>&copy; 2023 Risidio</p>
                         </Stack>
                     </Col>
-                    <Col>
+                    <Col className='d-sm-none'>
                         <Stack className='d-flex justify-content-center align-items-center'>
                             <small className="p-2 footer-items-title">Terms</small>
                             <small className="p-2">Shipping Policy</small>
@@ -31,7 +34,7 @@ const FooterSection = () => {
 
                         </Stack>
                     </Col>
-                    <Col>
+                    <Col className='d-sm-none'>
                         <Stack className='d-flex justify-content-center align-items-center'>
                             <small className="p-2 footer-items-title">Collections</small>
                             <small className="p-2">All</small>

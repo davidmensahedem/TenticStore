@@ -1,17 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import AppHeader from '../components/Home/AppHeader';
-import TopSection from '../components/Home/TopSections';
+import TopSellingSection from '../components/Home/TopSections';
 import TrendingSection from '../components/Home/TrendingSection';
 import FooterSection from '../components/Utilities/FooterSection';
+import { useDispatch, useSelector } from 'react-redux';
+import { setMainProducts } from '../slices/productSlice';
 
 
 
 const Home = (props) => {
+
+    const { products,trending,topSelling } = useSelector(state => state.products);
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(setMainProducts());
+    },products);
+
     return (
         <>
             <AppHeader />
-            <TopSection />
-            <TrendingSection />
+            <TopSellingSection products={topSelling} />
+            <TrendingSection products={trending} />
             <FooterSection />
         </>
     );
