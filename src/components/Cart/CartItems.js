@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Stack } from 'react-bootstrap';
 import CartItem from './CartItem';
+import {  useSelector } from 'react-redux';
 
 const CartItems = () => {
+
+    const {cart} = useSelector(state=> state.shoppingCart);
+
+    useEffect(()=>{
+
+    },[cart])
+
     return (
         <Stack gap={1}>
-            {[1,2,3,4].map(n => <CartItem key={n} />)}
+            {cart && cart.map(item => <CartItem item={item} key={item.id} />)}
         </Stack>
     );
 }

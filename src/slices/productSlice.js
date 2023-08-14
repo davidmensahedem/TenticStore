@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 const allProducts = [
     {
@@ -9,7 +9,7 @@ const allProducts = [
         "category": "Arts",
         "price": "100",
         "oldprice": "150",
-        "quantity": "30",
+        "quantity": 1,
         "isTopSelling": true,
         "isTrending": true
     },
@@ -21,7 +21,7 @@ const allProducts = [
         "category": "Arts",
         "price": "170",
         "oldprice": "190",
-        "quantity": "30",
+        "quantity": 1,
         "isTopSelling": false,
         "isTrending": true
     },
@@ -33,7 +33,7 @@ const allProducts = [
         "category": "Musics",
         "price": "200",
         "oldprice": "220",
-        "quantity": "30",
+        "quantity": 1,
         "isTopSelling": false,
         "isTrending": true
     },
@@ -45,7 +45,7 @@ const allProducts = [
         "category": "Movies",
         "price": "350",
         "oldprice": "370",
-        "quantity": "30",
+        "quantity": 1,
         "isTopSelling": true,
         "isTrending": false
     },
@@ -57,7 +57,7 @@ const allProducts = [
         "category": "Arts",
         "price": "311",
         "oldprice": "333",
-        "quantity": "30",
+        "quantity": 1,
         "isTopSelling": true,
         "isTrending": false
     },
@@ -69,16 +69,11 @@ const allProducts = [
         "category": "Movies",
         "price": "311",
         "oldprice": "333",
-        "quantity": "30",
+        "quantity": 1,
         "isTopSelling": true,
         "isTrending": false
     }
 ];
-
-export const fetchProducts = createAsyncThunk("products/fetchProducts", () => {
-    fetch("../Data/collections.json")
-        .then(res => res.json()).then(res => res);
-});
 
 const productSlice = createSlice({
     name: "products",
@@ -90,17 +85,12 @@ const productSlice = createSlice({
         Cart:[],
         error: ""
     },
-    extraReducers: (builder) => {
-        builder.addCase("fetchProducts.fulfilled", (state, action) => [
-            console.log("Fulfilled", action.payload)
-        ]);
-    },
     reducers: {
         getProducts: (state) => state.products,
         setMainProducts: (state) => {
             state.trending = state.products.filter(product => product.isTrending);
             state.topSelling = state.products.filter(product => product.isTopSelling)
-        }       
+        }
     }
 });
 

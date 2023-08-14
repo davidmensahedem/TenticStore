@@ -37,7 +37,7 @@ const AppNavbar = (props) => {
                         <Link to="/allcollections" className='m-1 text-decoration-none text-white'>All Collections</Link>
                     </Nav>
                     <div className="d-flex m-1">
-                        <FontAwesomeIcon className='text-white m-1' onClick={displayCart} icon={faShoppingCart} />
+                        <FontAwesomeIcon className='text-white m-1 cartIcon' onClick={displayCart} icon={faShoppingCart} />
                     </div>
                 </Navbar.Collapse>
             </Container>

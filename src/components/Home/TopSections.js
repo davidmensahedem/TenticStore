@@ -4,18 +4,15 @@ import ProductCard from '../Products/ProductCard';
 
 
 
-const TopSellingSection = ({products}) => {
-    return ( 
+const TopSellingSection = ({ products }) => {
+    return (
         <>
-              <Row>
-                <Col>
-                    <div className='top-selling-section text-center'>
-                        <h5 className='text-muted top-selling-title'>Top Selling</h5>
-                    </div>
-                </Col>
-            </Row>
+
             <Row>
-                {products.filter(product=>product.isTopSelling).map(product => (
+                <div className='top-selling-section text-center'>
+                    <h5 className='text-muted top-selling-title'>Top Selling</h5>
+                </div>
+                {products.filter(product => product.isTopSelling).map(product => (
                     <Col key={product.id} md={3}>
                         <div className='container px-3'>
                             <ProductCard key={product.id} product={product} />
@@ -24,7 +21,7 @@ const TopSellingSection = ({products}) => {
                 ))}
             </Row>
         </>
-     );
+    );
 }
- 
+
 export default TopSellingSection;

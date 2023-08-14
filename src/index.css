@@ -82,6 +82,23 @@ code {
   height: 60px;
 }
 
+.cartIcon{
+  display: block;
+}
+
+.cartIcon:hover{
+  cursor: pointer;
+}
+
+.empty-cart-icon{
+  font-size: 100px;
+}
+
+.emptyCartContainer{
+  height: 100%;
+  width: auto;
+}
+
 
 
 @media (max-width: 0px) {
