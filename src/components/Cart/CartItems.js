@@ -5,7 +5,7 @@ import CartItem from './CartItem';
 const CartItems = () => {
     return (
         <Stack gap={1}>
-            {new Array(1,2,3,4).map(n => <CartItem key={n} />)}
+            {[1,2,3,4].map(n => <CartItem key={n} />)}
         </Stack>
     );
 }

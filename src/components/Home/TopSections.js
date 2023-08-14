@@ -15,7 +15,7 @@ const TopSection = () => {
                 </Col>
             </Row>
             <Row>
-                {new Array(1, 2, 3, 4,).map(n => (
+                {[1, 2, 3, 4].map(n => (
                     <Col key={n} md={3}>
                         <div className='container px-3'>
                             <ProductCard Product={n} />

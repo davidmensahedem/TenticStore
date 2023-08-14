@@ -1,5 +1,5 @@
 import React from 'react';
-import { Badge, Button, Col, Container, Image, Row } from 'react-bootstrap';
+import { Badge, Button, Col, Container,Row } from 'react-bootstrap';
 
 const ProductDetails = () => {
     return (<>
@@ -8,7 +8,7 @@ const ProductDetails = () => {
             <Row>
                 <Col md={8}>
                     <div className='d-flex justify-content-center align-items-center'>
-                        <img src="images/indigi_art.webp" className='tentic-productdetails-image mb-3' />
+                        <img src="images/indigi_art.webp" alt="image_indigi" className='tentic-productdetails-image mb-3' />
                     </div>
                 </Col>
                 <Col>

@@ -4,7 +4,7 @@ import { Badge } from 'react-bootstrap';
 const CartItem = (props) => {
     return (<div className='d-flex justify-content-between border-bottom border-success mb-2'>
         <div className='p-2'>
-            <img src="images/risidio_logo.png" alt="cart item image" className='tentic-cart-image' />
+            <img src="images/risidio_logo.png" alt="cartitemimage" className='tentic-cart-image' />
         </div>
         <div className='p-2'>
             <p className='text-muted'><b>Product Title</b></p>

@@ -1,12 +1,9 @@
-import logo from './logo.svg';
-import styles from './App.css';
-import { Outlet, Route, RouterProvider, Routes, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
+import { Outlet, Route, RouterProvider,createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import Home from './pages/Home';
 import ProductDetails from './pages/ProductDetails';
 import AllCollections from './pages/AllCollections';
 import Cart from './components/Cart/Cart';
 import AppNavbar from './components/Utilities/AppNavbar';
-import AppHeader from './components/Home/AppHeader';
 
 function App() {
 

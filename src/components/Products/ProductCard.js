@@ -1,6 +1,5 @@
 import React from 'react';
 import { Badge } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 const ProductCard = ({n}) => {
@@ -15,7 +14,7 @@ const ProductCard = ({n}) => {
                         <p><Badge><b>$5.00 USD</b></Badge></p>
                         <small className='text-muted'><del>$10.00 USD</del></small>
                     </div>
-                    <p><a href="#" className='tentic-text-light-brown'>Buy now</a></p>
+                    <p><a href="#home" className='tentic-text-light-brown'>Buy now</a></p>
                 </Card.Text>
             </Card.Body>
         </Card>

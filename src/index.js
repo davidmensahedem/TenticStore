@@ -3,11 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Home from './pages/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Route } from 'react-router-dom';
-import ProductDetails from './pages/ProductDetails';
-import AllCollections from './pages/AllCollections';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
