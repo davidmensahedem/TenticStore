@@ -4,7 +4,9 @@ import { Outlet } from 'react-router-dom';
 import Cart from '../Cart/Cart';
 
 const Layout = () => {
-    return (<>
+    
+    return (
+    <>
         <AppNavbar/>
         <Outlet />
         <Cart placement="end" />

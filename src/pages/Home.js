@@ -10,16 +10,18 @@ import { setMainProducts } from '../slices/productSlice';
 
 const Home = (props) => {
 
-    const { products,trending,topSelling } = useSelector(state => state.products);
+    const { trending,topSelling } = useSelector(state => state.products);
+
     const dispatch = useDispatch();
-    useEffect(() => {
+
+    useEffect(()=>{
         dispatch(setMainProducts());
-    },products);
+    },[dispatch]);
 
     return (
         <>
             <AppHeader />
-            <TopSellingSection products={topSelling} />
+            <TopSellingSection products={topSelling}/>
             <TrendingSection products={trending} />
             <FooterSection />
         </>

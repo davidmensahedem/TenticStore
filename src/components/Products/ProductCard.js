@@ -1,28 +1,36 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Badge } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
+import { addProductToCart } from '../../slices/cartSlice';
+import { useDispatch } from 'react-redux';
 
-const ProductCard = ({product}) => {
+const ProductCard = ({ product }) => {
+
+    const dispatch = useDispatch();
 
     const renderProductDescription = (description) => {
-        return description.length < 50 ? description : `${description.substring(0,16)}...`
-    };  
+        return description.length < 15 ? description : `${description.substring(0, 16)}...`
+    };
+
+    const buyProduct = (product) => {
+        dispatch(addProductToCart(product));
+    }
 
     return (
         <Card className='shadow-sm mb-5 bg-white'>
-            <Card.Img variant="top" className="tentic-top-selling-img" src={product && `${product.imageUrl}`}/>
+            <Card.Img variant="top" className="tentic-top-selling-img" src={product && `${product.imageUrl}`} />
             <Card.Body className='bg-light'>
-                <Card.Text>
-                    <p>{product && product.productTitle}</p>  
-                    <p className='text-muted mt-3 Product-description'>{product && renderProductDescription(product.description)}</p>
-                    <div className='d-flex justify-content-between'>
-                        <p><Badge><b>{`${product && product.price}.00`}</b></Badge></p>
-                        <small className='text-muted'><del>{`${product && product.oldprice}.00`}</del></small>
-                    </div>
-                    <p><a href="#home" className='tentic-text-light-brown'>Buy now</a></p>
-                </Card.Text>
+                <Card.Text><span>{product && product.productTitle}</span></Card.Text>
+                <Card.Text><span className='text-muted mt-3 Product-description'>{product && renderProductDescription(product.description)}</span></Card.Text>
+
+                <div className='d-flex justify-content-between'>
+                    <p><Badge><b>{`${product && product.price}.00`}</b></Badge></p>
+                    <small className='text-muted'><del>{`${product && product.oldprice}.00`}</del></small>
+                </div>
+                <Link className='tentic-text-light-brown' onClick={() => buyProduct(product)}>Buy now</Link>
             </Card.Body>
-        </Card>
+        </Card >
     );
 }
 

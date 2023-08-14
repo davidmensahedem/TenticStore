@@ -26,7 +26,7 @@ const FooterSection = () => {
                             <p>&copy; 2023 Risidio</p>
                         </Stack>
                     </Col>
-                    <Col className='d-sm-none'>
+                    <Col className='d-xs-none'>
                         <Stack className='d-flex justify-content-center align-items-center'>
                             <small className="p-2 footer-items-title">Terms</small>
                             <small className="p-2">Shipping Policy</small>
@@ -34,7 +34,7 @@ const FooterSection = () => {
 
                         </Stack>
                     </Col>
-                    <Col className='d-sm-none'>
+                    <Col className='d-xs-none'>
                         <Stack className='d-flex justify-content-center align-items-center'>
                             <small className="p-2 footer-items-title">Collections</small>
                             <small className="p-2">All</small>

@@ -87,6 +87,7 @@ const productSlice = createSlice({
         products: allProducts,
         trending:[],
         topSelling:[],
+        Cart:[],
         error: ""
     },
     extraReducers: (builder) => {
