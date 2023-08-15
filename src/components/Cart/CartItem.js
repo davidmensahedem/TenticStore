@@ -12,7 +12,6 @@ const CartItem = ({ item }) => {
     const increaseProduct = (product) => {
         dispatch(incrementProductQuantity(product));
         dispatch(setProductsTotalAmount());
-
     }
 
     const decreaseProduct = (product) => {
@@ -44,7 +43,7 @@ const CartItem = ({ item }) => {
             </div>
         </div>
         <div className='p-1 d-flex align-items-center'>
-            <FontAwesomeIcon className='text-black m-1' onClick={()=>deleteCartItem(item)} icon={faTrashAlt} />
+            <FontAwesomeIcon className='text-black m-1' onClick={() => deleteCartItem(item)} icon={faTrashAlt} />
         </div>
     </div>);
 }

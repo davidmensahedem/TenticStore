@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+
 const cartSlice = createSlice({
     name: "products",
     initialState: {
@@ -30,7 +31,7 @@ const cartSlice = createSlice({
         decrementProductQuantity: (state, {payload}) => {
             let cartItem = state.cart.find(cartItem => cartItem.id === payload.id);
             if (cartItem && cartItem.quantity <= 0) {
-                cartItem.quantity = 0;
+                cartItem.quantity = 0;                
             }else{
                 cartItem.quantity -= 1;
             }

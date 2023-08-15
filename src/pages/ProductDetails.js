@@ -1,5 +1,5 @@
 import React from 'react';
-import { Badge, Button, Col, Container, Row } from 'react-bootstrap';
+import { Badge, Button, Col, Container,Row } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { addProductToCart, setProductsTotalAmount, updateCartItemsCount } from '../slices/cartSlice';
@@ -23,7 +23,7 @@ const ProductDetails = () => {
             <Row>
                 <Col md={8}>
                     <div className='d-flex justify-content-center align-items-center'>
-                        <img src={product.imageUrl} alt="sdfdw" className='tentic-productdetails-image mb-3' />
+                        <img alt={product.productTitle} src={product.imageUrl} id={product.imageUrl} width={50} />
                     </div>
                 </Col>
                 <Col >
@@ -36,7 +36,7 @@ const ProductDetails = () => {
                     <p className='text-muted mt-3 tentic-productdetails-summary'>
                         {product.description}
                     </p>
-                    <Button variant="primary" className="mt-2 mb-3" onClick={()=>addToCart(product)}>Add to Cart</Button>
+                    <Button variant="primary" className="mt-2 mb-3" onClick={() => addToCart(product)}>Add to Cart</Button>
                 </Col>
             </Row>
         </Container>

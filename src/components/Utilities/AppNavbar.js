@@ -23,18 +23,18 @@ const AppNavbar = (props) => {
     return (
         <Navbar expand="lg" className="bg-black" sticky='top'>
             <Container fluid>
-                <Link>
-                    <Image src='images/risidio_logo.png' width={50} alt='Logo' />
+                <Link className='m-1'>
+                    <img src='images/risidio_logo_192.png' alt="base_logo" id="base_logo" className="mr-2"width={40} height={30}/>
                 </Link>
                 <Navbar.Toggle aria-controls="navbarScroll" className='bg-white' />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
                         className="me-auto my-2 my-lg-0"
-                        style={{ maxHeight: '100px' }}
+                        style={{ maxHeight: '80px' }}
                         navbarScroll
                     >
                         <Link to="/" className='m-1 text-decoration-none text-white'>Home</Link>
-                        <Link to="/allcollections" className='m-1 text-decoration-none text-white'>All Collections</Link>
+                        <Link to="/allcollections" className='m-1 text-decoration-none text-white'>Collections</Link>
                     </Nav>
                     <div className="d-flex m-1">
                         <FontAwesomeIcon className='text-white m-1 cartIcon' onClick={displayCart} icon={faShoppingCart} />
