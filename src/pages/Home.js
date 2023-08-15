@@ -5,6 +5,7 @@ import TrendingSection from '../components/Home/TrendingSection';
 import FooterSection from '../components/Utilities/FooterSection';
 import { useDispatch, useSelector } from 'react-redux';
 import { setMainProducts } from '../slices/productSlice';
+import Notification from '../components/Utilities/Notification';
 
 
 
@@ -23,6 +24,7 @@ const Home = (props) => {
             <AppHeader title="Tentic Shop" message="The authentic NFT market platform to safely buy and own products."/>
             <TopSellingSection products={topSelling}/>
             <TrendingSection products={trending} />
+            <Notification/>
             <FooterSection />
         </>
     );

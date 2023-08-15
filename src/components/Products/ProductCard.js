@@ -4,6 +4,7 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import { addProductToCart, setProductsTotalAmount, updateCartItemsCount } from '../../slices/cartSlice';
 import { useDispatch } from 'react-redux';
+import { setNotificationInfo, showNotification } from '../../slices/notificationSlice';
 
 const ProductCard = ({ product }) => {
 
@@ -13,10 +14,17 @@ const ProductCard = ({ product }) => {
         return description.length < 15 ? description : `${description.substring(0, 16)}...`
     };
 
+    const notyInfo = {
+        title:"Cart",
+        message:"NFT added to cart"
+    };
+
     const buyProduct = (product) => {
         dispatch(addProductToCart(product));
         dispatch(setProductsTotalAmount());
         dispatch(updateCartItemsCount());
+        dispatch(setNotificationInfo(notyInfo))
+        dispatch(showNotification());
     }
 
     return (
