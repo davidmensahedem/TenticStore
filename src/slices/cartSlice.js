@@ -45,11 +45,12 @@ const cartSlice = createSlice({
             state.cartState = false
         },
         updateCartItemsCount: (state) => {
-            state.cartItemsCount = state.cart.length > 1 ? state.cart.length  : 0;
+            state.cartItemsCount = state.cart.length > 0 ? state.cart.length  : 0;
         },
         removeCartItem: (state,{payload}) => {
             let cartItem = state.cart.find(item => item.id === payload.id);
             let itemIndex = state.cart.indexOf(cartItem);
+            console.log("Deleting Cart Item with id",itemIndex);
             state.cart.splice(itemIndex,1);
         },
         setProductsTotalAmount:(state,payload) => {

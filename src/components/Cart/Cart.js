@@ -23,7 +23,7 @@ function Cart({ ...props }) {
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                     <Container>
-                        {cartItemsCount > 0 ?
+                        {cartItemsCount ?
                             (<>
                                 <div className='height-50vh'>
                                     <CartItems />
