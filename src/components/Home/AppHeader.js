@@ -1,13 +1,13 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 
-const AppHeader = (props) => {
+const AppHeader = ({title,message}) => {
     return (
         <Row>
             <Col>
                 <div className="Home-header">
-                    <p>Tentic Shop</p>
-                    <p>The authentic NFT market platform to safely buy and own products.</p>
+                    <p>{title}</p>
+                    <p>{message}</p>
                 </div>
             </Col>
         </Row>

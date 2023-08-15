@@ -25,17 +25,19 @@ function Cart({ ...props }) {
                     <Container>
                         {cartItemsCount > 0 ?
                             (<>
-                                <CartItems />
-                                <TaxTotalInfo />
+                                <div className='height-50vh'>
+                                    <CartItems />
+                                </div>
+                                    <TaxTotalInfo />
                             </>) : (
                                 <div className='p-2 d-flex flex-column justify-content-center align-items-center emptyCartContainer'>
                                     <div>
                                         <FontAwesomeIcon className='text-black m-1 empty-cart-icon' icon={faCartShopping} />
                                     </div>
                                     <div className='mt-3'>
-                                        <p className="text-muted">Cart is empty</p>
+                                        <p className="text-muted">Cart is empty</p> 
                                     </div>
-                                    
+
 
                                 </div>)
                         }

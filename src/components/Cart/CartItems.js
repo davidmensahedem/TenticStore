@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Stack } from 'react-bootstrap';
 import CartItem from './CartItem';
 import {  useSelector } from 'react-redux';
@@ -6,10 +6,6 @@ import {  useSelector } from 'react-redux';
 const CartItems = () => {
 
     const {cart} = useSelector(state=> state.shoppingCart);
-
-    useEffect(()=>{
-
-    },[cart])
 
     return (
         <Stack gap={1}>

@@ -30,7 +30,7 @@ const allProducts = [
         "productTitle": "Studio",
         "description": "Bringing together all artworks indigenous cultures and ideas. Creating an ecosystem of sustainable and impactful projects.",
         "imageUrl": "images/studio.webp",
-        "category": "Musics",
+        "category": "Music",
         "price": "200",
         "oldprice": "220",
         "quantity": 1,
@@ -42,7 +42,7 @@ const allProducts = [
         "productTitle": "Prom",
         "description": "The People's Republic of Movies (PROM) is a virtual and decentralised ecosystem helping creatives to finance and launch their movie projects.",
         "imageUrl": "images/prom.webp",
-        "category": "Movies",
+        "category": "Videos",
         "price": "350",
         "oldprice": "370",
         "quantity": 1,
@@ -66,7 +66,7 @@ const allProducts = [
         "productTitle": "Number#1",
         "description": "A curate NFT marketplace on the Bitcoin blockchain featuring Chemical X, Cara Delevingne, Fatboy Slim, Dave Stewart and Orbital.",
         "imageUrl": "images/num1.webp",
-        "category": "Movies",
+        "category": "Videos",
         "price": "311",
         "oldprice": "333",
         "quantity": 1,
@@ -83,17 +83,21 @@ const productSlice = createSlice({
         trending:[],
         topSelling:[],
         Cart:[],
-        error: ""
+        error: "",
+        activeCategory:"All"
     },
     reducers: {
         getProducts: (state) => state.products,
         setMainProducts: (state) => {
             state.trending = state.products.filter(product => product.isTrending);
             state.topSelling = state.products.filter(product => product.isTopSelling)
+        },
+        setProductCategory:(state,action)=>{
+            state.activeCategory = action.payload;
         }
     }
 });
 
-export const { getProducts,setMainProducts } = productSlice.actions;
+export const { getProducts,setMainProducts,setProductCategory } = productSlice.actions;
 
 export default productSlice.reducer;

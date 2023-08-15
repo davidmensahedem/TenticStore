@@ -9,20 +9,26 @@ const cartSlice = createSlice({
         cartState: false
     },
     reducers: {
-        addProductToCart: (state, action) => {
-            state.cart.push(action.payload);
+        addProductToCart: (state, {payload}) => {
+            console.log(payload);
+            let cartItem = state.cart.find(item => item.id === payload.id);
+            if(cartItem){
+                cartItem.quantity += 1;
+            }else{
+                state.cart.push(payload);
+            }
         },
-        removeProductFromCart: (state, action) => {
-            state.cart.push(action.payload);
+        removeProductFromCart: (state, {payload}) => {
+            state.cart.push(payload);
         },
-        incrementProductQuantity: (state, action) => {
-            let cartItem = state.cart.find(cartItem => cartItem.id === action.payload.id);
+        incrementProductQuantity: (state, {payload}) => {
+            let cartItem = state.cart.find(cartItem => cartItem.id === payload.id);
             if (cartItem) {
                 cartItem.quantity += 1;
             }
         },
-        decrementProductQuantity: (state, action) => {
-            let cartItem = state.cart.find(cartItem => cartItem.id === action.payload.id);
+        decrementProductQuantity: (state, {payload}) => {
+            let cartItem = state.cart.find(cartItem => cartItem.id === payload.id);
             if (cartItem && cartItem.quantity <= 0) {
                 cartItem.quantity = 0;
             }else{
@@ -40,6 +46,17 @@ const cartSlice = createSlice({
         },
         updateCartItemsCount: (state) => {
             state.cartItemsCount = state.cart.length > 1 ? state.cart.length  : 0;
+        },
+        removeCartItem: (state,{payload}) => {
+            let cartItem = state.cart.find(item => item.id === payload.id);
+            let itemIndex = state.cart.indexOf(cartItem);
+            state.cart.splice(itemIndex,1);
+        },
+        setProductsTotalAmount:(state,payload) => {
+            let totalSum = 0;
+            state.cart.forEach(item => totalSum += (item.quantity * item.price));
+            totalSum += 1;
+            state.cartTotalAmount = totalSum;
         }
     }
 });
@@ -51,7 +68,9 @@ export const {
     decrementProductQuantity,
     showCart,
     hideCart,
-    updateCartItemsCount
+    updateCartItemsCount,
+    setProductsTotalAmount,
+    removeCartItem
 } = cartSlice.actions;
 
 export default cartSlice.reducer;

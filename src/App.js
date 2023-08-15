@@ -4,6 +4,7 @@ import AllCollections from './pages/AllCollections';
 import PageNotFound from './components/Utilities/PageNotFound';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Layout from './components/Utilities/Layout';
+import Checkout from './pages/Checkout';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/productdetails/:id' element={<ProductDetails />} />
             <Route path='/allcollections' element={<AllCollections />} />
+            <Route path='/checkout' element={<Checkout />} />
             <Route path='*' element={<PageNotFound />} />
           </Route>
         </Routes>

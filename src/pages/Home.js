@@ -20,7 +20,7 @@ const Home = (props) => {
 
     return (
         <>
-            <AppHeader />
+            <AppHeader title="Tentic Shop" message="The authentic NFT market platform to safely buy and own products."/>
             <TopSellingSection products={topSelling}/>
             <TrendingSection products={trending} />
             <FooterSection />

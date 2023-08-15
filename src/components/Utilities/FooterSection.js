@@ -8,7 +8,7 @@ const FooterSection = () => {
         <>
             <Row>
                 <Col>
-                    <Container className='d-flex justify-content-center align-items-center bg-light'>
+                    <Container className='d-flex justify-content-center align-items-center bg-light' fluid>
                         <div className='p-4 my-3'>
                             <Button variant='outline-success'>
                                 <Link to="/allcollections" className='text-decoration-none text-success'>View all collections</Link>
@@ -18,7 +18,7 @@ const FooterSection = () => {
                 </Col>
             </Row>
 
-            <Container className='text-white bg-black mt-2'>
+            <Container className='text-white bg-black' fluid>
                 <Row>
                     <Col>
                         <Stack className='d-flex justify-content-center align-items-center'>
