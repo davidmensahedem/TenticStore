@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# TenticStore v1.0.0 [https://gorgeous-puppy-35956b.netlify.app/]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+        <p align="center">TenticStore (version 1.0.0)</p>
+</p>
 
-## Available Scripts
+<p align="center">
+    An NFT Ecommerce Marketplace built with React Js.
+</p>
 
-In the project directory, you can run:
+<p align="center">
+    This repository consists of a <strong>React Js Application</strong> built with <strong>ReactJs and Redux</strong> 
+</p>
 
-### `npm start`
+<p align="center">
+    <p align="center">Application Features</p>
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- View Collections
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- View the details of an NFT in a collection
 
-### `npm run build`
+- Filter a collection
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Add an NFT from a collection to cart
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- View the cart and update the cart
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Remove an NFT from the cart
 
-### `npm run eject`
+- Proceed to checkout
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Runtime Environment
 
-## Learn More
+-<b>NodeJs v18.12.1</b>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Packages
 
-### Code Splitting
+-`@fortawesome/fontawesome-svg-core: "^6.4.2"`
+-`@fortawesome/free-regular-svg-icons: "^6.4.2"`
+-`@fortawesome/free-solid-svg-icons: "^6.4.2"`
+-`@fortawesome/react-fontawesome: "^0.2.0"`
+-`@reduxjs/toolkit: "^1.9.5"`
+-`@testing-library/jest-dom: "^5.17.0"`
+-`@testing-library/react: "^13.4.0"`
+-`@testing-library/user-event: "^13.5.0"`
+-`axios: "^1.4.0"`
+-`bootstrap: "^5.3.1"`
+-`font-awesome: "^4.7.0"`
+-`react: "^18.2.0"`
+-`react-bootstrap: "^2.8.0"`
+-`react-dom: "^18.2.0"`
+-`react-owl-carousel: "^2.3.3"`
+-`react-redux: "^8.1.2"`
+-`react-router-bootstrap: "^0.26.2"`
+-`react-router-dom: "^6.15.0"`
+-`react-scripts: "5.0.1"`
+-`web-vitals: "^2.1.4"`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Usage
 
-### Analyzing the Bundle Size
+### `Clone the repo or download the zip file` 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### `Move into the appropriate directory`
 
-### Making a Progressive Web App
+### `Run npm install`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+### `Npm start`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
