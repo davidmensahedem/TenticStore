@@ -22,7 +22,7 @@ const FooterSection = () => {
                 <Row>
                     <Col>
                         <Stack className='d-flex justify-content-center align-items-center'>
-                            <Image src='images/risidio_logo.png' className='img-responsive' width={80} height={80} />
+                            <Image src='images/risidio_logo_512.png' className='img-responsive' width={80} height={80} />
                             <p>&copy; 2023 Risidio</p>
                         </Stack>
                     </Col>

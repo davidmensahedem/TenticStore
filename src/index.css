@@ -138,6 +138,10 @@ code {
     max-height: auto;
   }
 
+  .d-xs-none{
+    display: none;
+  }
+
 }
 
 
