@@ -20,7 +20,7 @@ const AppNavbar = (props) => {
 
 
     return (
-        <Navbar expand="lg" className="bg-black" sticky='top'>
+        <Navbar expand="lg" className="bg-black">
             <Container fluid>
                 <Link className='m-1'>
                     <img src='images/risidio_logo_192.png' alt="base_logo" id="base_logo" className="mr-2"width={40} height={30}/>

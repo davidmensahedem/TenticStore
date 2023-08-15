@@ -11,20 +11,22 @@ import Notification from '../components/Utilities/Notification';
 
 const Home = (props) => {
 
-    const { trending,topSelling } = useSelector(state => state.products);
+    const { trending, topSelling } = useSelector(state => state.products);
+    const { notyState } = useSelector(state => state.shoppingCart);
+
 
     const dispatch = useDispatch();
 
-    useEffect(()=>{
+    useEffect(() => {
         dispatch(setMainProducts());
-    },[dispatch]);
+    }, [dispatch]);
 
     return (
         <>
-            <AppHeader title="Tentic Shop" message="The authentic NFT market platform to safely buy and own products."/>
-            <TopSellingSection products={topSelling}/>
+            <AppHeader title="Tentic Shop" message="The authentic NFT market platform to safely buy and own products." />
+           { notyState && <Notification />}
+            <TopSellingSection products={topSelling} />
             <TrendingSection products={trending} />
-            <Notification/>
             <FooterSection />
         </>
     );

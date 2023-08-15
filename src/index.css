@@ -126,6 +126,10 @@ code {
   height: 210px;
   }
 
+  .toastWrapper{
+    margin-top: 40px;
+  }
+
 
 @media (max-width: 576px) {
   .tentic-productdetails-image {
@@ -141,6 +145,8 @@ code {
   .d-xs-none{
     display: none;
   }
+
+ 
 
 }
 
